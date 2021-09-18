@@ -7,62 +7,62 @@
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@id/start"
         motion:duration="1000">
-        <KeyFrameSet>
-        </KeyFrameSet>
-        <OnClick motion:targetId="@+id/btnaddheardphone" />
+       <KeyFrameSet>
+       </KeyFrameSet>
+        <OnClick motion:targetId="@id/btnaddheardphone" />
     </Transition>
-
     <Transition
-        motion:constraintSetEnd="@+id/end1"
-        motion:constraintSetStart="@id/imageView"
-        motion:duration="1000">
-        <OnClick motion:targetId="@+id/btnaddcamera" />
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/endcamera"
+        motion:duration="1000"
+        >
+        <OnClick motion:targetId="@id/btnaddcamera" />
     </Transition>
-
     <Transition
-        motion:constraintSetEnd="@+id/end2"
-        motion:constraintSetStart="@id/imageView"
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/end_game"
         motion:duration="1000">
-        <OnClick motion:targetId="@+id/btncontroller" />
+        <OnClick motion:targetId="@id/btncontroller" />
     </Transition>
 
     <ConstraintSet android:id="@+id/start">
     </ConstraintSet>
 
-    <ConstraintSet android:id="@+id/end">
+    <ConstraintSet android:id="@+id/end"
+        android:visibility="invisible" >
         <Constraint
             android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="564dp"
+            motion:layout_constraintHorizontal_bias="0.508"
+            motion:layout_constraintEnd_toEndOf="parent"
             android:layout_width="wrap_content"
-            android:id="@+id/imageView"
-            motion:layout_constraintEnd_toEndOf="@+id/imageView3"
-            motion:layout_constraintStart_toStartOf="@+id/imageView3"
-            motion:layout_constraintBottom_toBottomOf="@+id/imageView3"
-            motion:layout_constraintTop_toTopOf="@+id/imageView3"
+            motion:layout_constraintTop_toBottomOf="@+id/title"
+            android:id="@+id/img_headphone"
             android:visibility="invisible" />
     </ConstraintSet>
-
-    <ConstraintSet android:id="@+id/end1">
-
+    <ConstraintSet android:id="@+id/endcamera" >
         <Constraint
             android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="540dp"
+            motion:layout_constraintHorizontal_bias="0.519"
+            motion:layout_constraintEnd_toEndOf="parent"
             android:layout_width="wrap_content"
-            android:id="@+id/imageView4"
-            motion:layout_constraintEnd_toEndOf="@+id/imageView3"
-            motion:layout_constraintStart_toStartOf="@+id/imageView3"
-            motion:layout_constraintBottom_toBottomOf="@+id/imageView3"
-            motion:layout_constraintTop_toTopOf="@+id/imageView3"
+            motion:layout_constraintTop_toBottomOf="@+id/title"
+            android:id="@+id/img_camera"
             android:visibility="invisible" />
     </ConstraintSet>
-
-    <ConstraintSet android:id="@+id/end2">
-
+    <ConstraintSet android:id="@+id/end_game" >
         <Constraint
             android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="548dp"
+            motion:layout_constraintEnd_toEndOf="parent"
             android:layout_width="wrap_content"
-            android:id="@+id/imageView5"
-            motion:layout_constraintStart_toStartOf="@+id/imageView3"
-            android:visibility="invisible"
-            motion:layout_editor_absoluteY="619dp" />
+            motion:layout_constraintTop_toBottomOf="@+id/title"
+            android:id="@+id/img_game"
+            android:visibility="invisible" />
     </ConstraintSet>
 
 </MotionScene>
