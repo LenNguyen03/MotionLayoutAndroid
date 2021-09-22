@@ -9,17 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MotionLayoutAndroid">
-        <activity android:name=".Shopping">
+        <activity android:name=".MusicAppScreen2"/>
+        <activity android:name=".MusicAppScreen1"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".BabyCall">
+        <activity android:name=".Shopping"
+            android:exported="true">
 
         </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".BabyCall"/>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
