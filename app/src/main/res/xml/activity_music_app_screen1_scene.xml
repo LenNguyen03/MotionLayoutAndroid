@@ -6,18 +6,16 @@
     <Transition
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@id/start"
-        motion:duration="1000">
+        motion:duration="5000">
        <KeyFrameSet>
-           <KeyAttribute />
-           <KeyAttribute />
            <KeyAttribute
                motion:motionTarget="@+id/imageView"
-               motion:framePosition="41"
-               android:scaleY="1.2" />
+               motion:framePosition="40"
+               android:scaleY="1" />
            <KeyAttribute
                motion:motionTarget="@+id/imageView"
-               motion:framePosition="37"
-               android:scaleX="1.2" />
+               motion:framePosition="40"
+               android:scaleX="1" />
        </KeyFrameSet>
         <OnSwipe motion:dragDirection="dragDown"
             motion:touchAnchorId="@id/imageView" />
